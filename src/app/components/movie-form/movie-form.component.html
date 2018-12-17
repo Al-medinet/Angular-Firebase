@@ -1,0 +1,47 @@
+<div class="col-md-4">
+  <form #movie="ngForm" (submit)="insertMovie(movie)">
+    <div class="form-group">
+      <label for="title">title</label>
+      <input ngModel name="title" type="text" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="year">year</label>
+      <input ngModel name="year" type="number" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="released">released</label>
+      <input
+        ngModel
+        name="released"
+        type="date"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="runtime">runtime</label>
+      <input ngModel name="runtime" type="text" class="form-control" required />
+    </div>
+    <div class="form-group">
+      <label for="genre">genre</label>
+      <select ngModel name="genre" class="form-control">
+        <option value=""></option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+        <option value="romance">Romance</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="director">director</label>
+      <input
+        ngModel
+        name="director"
+        type="text"
+        class="form-control"
+        required
+      />
+    </div>
+    <input type="submit" class="btn btn-primary" value="ajouter" />
+  </form>
+</div>
